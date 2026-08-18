@@ -1,332 +1,29 @@
-<!doctype html>
-<html lang="hi" class="dark scroll-smooth">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ziyan Abdullah | Poet &amp; Writer Portfolio</title>
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        gold: {
-                            100: '#FAF4E6',
-                            200: '#F3E5C8',
-                            300: '#E7D09E',
-                            400: '#DAB872',
-                            500: '#C99E48',
-                            600: '#A77F32',
-                            700: '#836023',
-                            800: '#5F4318',
-                            900: '#3D2A0E',
-                        },
-                        darkbg: '#0A0A0A',
-                        cardbg: 'rgba(20, 20, 20, 0.85)',
-                        bordergold: 'rgba(201, 158, 72, 0.3)',
-                    },
-                    fontFamily: {
-                        serif: ['Cinzel', 'Playfair Display', 'Georgia', 'serif'],
-                        cursive: ['Alex Brush', 'Great Vibes', 'cursive'],
-                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&amp;family=Cinzel:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-        body {
-            background-color: #070707;
-            color: #E2E8F0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            overflow-x: hidden;
-        }
-
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #FFF1D0 0%, #E2BA6E 50%, #9E7528 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .gold-border-glow {
-            border: 1px solid rgba(201, 158, 72, 0.35);
-            box-shadow: 0 0 25px rgba(201, 158, 72, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .gold-border-glow:hover {
-            border-color: rgba(201, 158, 72, 0.7);
-            box-shadow: 0 0 35px rgba(201, 158, 72, 0.3);
-        }
-
-        .glass-card {
-            background: rgba(18, 18, 18, 0.75);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(201, 158, 72, 0.2);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0A0A0A;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #3D2A0E;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #C99E48;
-        }
-
-        /* Ambient Glow */
-        .hero-glow {
-            position: absolute;
-            top: 20%;
-            left: 10%;
-            width: 350px;
-            height: 350px;
-            background: radial-gradient(circle, rgba(201, 158, 72, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
-            z-index: 0;
-            pointer-events: none;
-        }
-    </style>
- </head>
- <body class="relative min-h-screen selection:bg-gold-600 selection:text-white">
-  <!-- Ambient Background Light -->
-  <div class="hero-glow"></div>
-  <!-- Header Navigation -->
-  <header class="w-full py-6 px-6 md:px-16 flex justify-between items-center relative z-40 border-b border-gold-500/10 backdrop-blur-sm">
-   <a href="#" class="text-2xl md:text-3xl font-cursive text-gold-300 hover:text-gold-100 transition"> Ziyan Abdullah </a>
-   <nav class="hidden md:flex items-center space-x-8 text-sm tracking-wider uppercase text-gray-300 font-medium">
-    <a href="#home" class="text-gold-400 border-b border-gold-400 pb-1">Home</a> <a href="#about" class="hover:text-gold-300 transition">About</a> <a href="#poetry" class="hover:text-gold-300 transition">Poetry</a> <a href="#collections" class="hover:text-gold-300 transition">Collections</a> <a href="#contact" class="hover:text-gold-300 transition">Contact</a>
-   </nav>
-   <button onclick="toggleMobileNav()" class="md:hidden text-gold-400 text-2xl focus:outline-none"><i class="fa-solid fa-bars"></i></button>
-  </header>
-  <!-- Mobile Nav Menu Overlay -->
-  <div id="mobileNav" class="hidden fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center space-y-8 text-xl font-serif">
-   <button onclick="toggleMobileNav()" class="absolute top-6 right-6 text-gold-400 text-3xl"><i class="fa-solid fa-xmark"></i></button>
-   <a href="#home" onclick="toggleMobileNav()" class="text-gold-400">Home</a> <a href="#about" onclick="toggleMobileNav()" class="hover:text-gold-300">About</a> <a href="#poetry" onclick="toggleMobileNav()" class="hover:text-gold-300">Poetry</a> <a href="#collections" onclick="toggleMobileNav()" class="hover:text-gold-300">Collections</a> <a href="#contact" onclick="toggleMobileNav()" class="hover:text-gold-300">Contact</a>
-  </div>
-  <!-- MAIN CONTAINER -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 py-8">
-   <!-- HERO SECTION -->
-   <section id="home" class="relative min-h-[80vh] flex flex-col lg:flex-row items-center justify-between gap-12 pt-4">
-    <!-- Left Column: Customized Calligraphic Title Emblem Box -->
-    <div class="w-full lg:w-1/2 flex justify-center lg:justify-start relative z-10">
-     <div class="relative w-full max-w-md aspect-[4/5] rounded-2xl glass-card gold-border-glow p-8 flex flex-col items-center justify-between text-center overflow-hidden group">
-      <!-- Decorative Background Flourish -->
-      <div class="absolute -top-12 -right-12 text-gold-500/10 text-9xl font-serif pointer-events-none">
-       <i class="fa-solid fa-feather-pointed"></i>
-      </div>
-      <div class="absolute -bottom-12 -left-12 text-gold-500/10 text-9xl font-serif pointer-events-none">
-       <i class="fa-solid fa-inkwell"></i>
-      </div>
-      <!-- Top Emblem Header -->
-      <div class="pt-4 space-y-2">
-       <div class="flex items-center justify-center space-x-3 text-gold-400">
-        <div class="h-[1px] w-8 bg-gold-400/50"></div>
-        <i class="fa-solid fa-crown text-xs"></i>
-        <div class="h-[1px] w-8 bg-gold-400/50"></div>
-       </div>
-       <p class="text-[11px] uppercase tracking-[0.3em] text-gold-400 font-semibold">Ghazal &amp; Nazm Writer</p>
-      </div>
-      <!-- Middle Calligraphy Name Display -->
-      <div class="my-auto space-y-4">
-       <h2 class="text-5xl sm:text-6xl font-cursive gold-gradient-text leading-tight group-hover:scale-105 transition duration-500">Ziyan Abdullah</h2>
-       <div class="w-20 h-[1px] bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto"></div>
-       <p class="text-sm font-serif italic text-gold-200/90 tracking-wide px-2">“Kalam Ka Musafir, Jazbaton Ka Shahkar”</p>
-      </div>
-      <!-- Bottom Custom Poetry Lines -->
-      <div class="w-full pt-4 pb-2 border-t border-gold-500/20 space-y-2">
-       <p class="text-xs font-serif italic text-gray-300 leading-relaxed">“Khamoshiyon ko alfaz me dhalta hoon,
-        <br>
-        Likh kar dil ke jazbaat, kagaz pe chalta hoon.”</p>
-       <span class="inline-block text-[10px] text-gold-400/80 tracking-widest uppercase font-medium"> — Official Portfolio </span>
-      </div>
-     </div>
-    </div>
-    <!-- Right Column: Hero Content -->
-    <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 z-10">
-     <div class="inline-block px-4 py-1.5 rounded-full border border-gold-500/30 text-xs md:text-sm tracking-[0.25em] text-gold-300 uppercase font-medium bg-gold-900/20">WRITER • POET • DREAMER</div>
-     <div class="space-y-1">
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif tracking-tight text-white font-normal">Ziyan</h1>
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-cursive gold-gradient-text pt-2 leading-tight">Abdullah</h1>
-     </div>
-     <!-- Feather Divider -->
-     <div class="flex items-center space-x-3 text-gold-400 py-2">
-      <div class="h-[1px] w-12 bg-gradient-to-r from-transparent to-gold-400"></div>
-      <i class="fa-solid fa-feather-pointed text-lg"></i>
-      <div class="h-[1px] w-12 bg-gradient-to-l from-transparent to-gold-400"></div>
-     </div>
-     <!-- Quote Box -->
-     <div class="space-y-3 max-w-lg">
-      <p class="text-lg md:text-xl font-serif italic text-gray-200 font-light leading-relaxed">“I write what I feel,
-       <br>
-       I feel what I cannot say.”</p>
-      <p class="text-xl font-cursive text-gold-400 text-right pr-6">— Ziyan Abdullah</p>
-     </div>
-     <!-- Featured Ghazal Line Box -->
-     <div class="w-full max-w-lg mt-4 p-6 rounded-xl glass-card border border-gold-500/30 text-center space-y-3 shadow-2xl">
-      <p class="text-sm font-serif italic text-gold-200 leading-relaxed">“Kuch baatein lafzon me kaheen nahi jaati,
-       <br>
-       Wo sirf shaiyari me mehsoos ki jaati hain.”</p>
-      <div class="flex items-center justify-center space-x-2 text-xs text-gold-400">
-       <i class="fa-solid fa-pen-nib"></i> <span class="tracking-widest uppercase font-medium">Ziyan Verses</span>
-      </div>
-     </div>
-    </div>
-   </section>
-   <!-- ABOUT THE POET SECTION -->
-   <section id="about" class="pt-16 border-t border-gold-500/10">
-    <h2 class="text-3xl md:text-4xl font-serif text-white tracking-wide mb-2">About The Poet</h2>
-    <div class="w-16 h-[2px] bg-gold-400 mb-10"></div>
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-     <!-- Left Narrative Box -->
-     <div class="lg:col-span-5 p-8 rounded-2xl glass-card flex flex-col justify-between space-y-6">
-      <div class="space-y-4 text-gray-300 leading-relaxed font-light">
-       <p>Ziyan Abdullah writes from the heart. His words are born from silence, shaped by emotions, and lived in through every line.</p>
-       <p>He believes poetry is not just written, it is felt. Through his verses, he explores the unseen nuances of love, heartbreak, solitude, and hope.</p>
-      </div>
-      <div>
-       <a href="#poetry" class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-lg border border-gold-400/50 text-gold-300 hover:bg-gold-500/10 hover:border-gold-400 transition text-sm tracking-wider font-medium"> <span>Read More</span> <i class="fa-solid fa-arrow-right text-xs"></i> </a>
-      </div>
-     </div>
-     <!-- Middle Stats Grid -->
-     <div class="lg:col-span-3 grid grid-cols-1 gap-4">
-      <div class="p-5 rounded-2xl glass-card flex items-center space-x-4 border border-gold-500/20 hover:border-gold-400/50 transition">
-       <div class="p-3 rounded-xl bg-gold-900/30 text-gold-400 text-2xl">
-        <i class="fa-solid fa-feather"></i>
-       </div>
-       <div>
-        <h3 class="text-2xl font-serif font-bold text-white">100+</h3>
-        <p class="text-xs text-gray-400 tracking-wider">Poems Written</p>
-       </div>
-      </div>
-      <div class="p-5 rounded-2xl glass-card flex items-center space-x-4 border border-gold-500/20 hover:border-gold-400/50 transition">
-       <div class="p-3 rounded-xl bg-gold-900/30 text-gold-400 text-2xl">
-        <i class="fa-regular fa-heart"></i>
-       </div>
-       <div>
-        <h3 class="text-2xl font-serif font-bold text-white">10K+</h3>
-        <p class="text-xs text-gray-400 tracking-wider">Readers</p>
-       </div>
-      </div>
-      <div class="p-5 rounded-2xl glass-card flex items-center space-x-4 border border-gold-500/20 hover:border-gold-400/50 transition">
-       <div class="p-3 rounded-xl bg-gold-900/30 text-gold-400 text-2xl">
-        <i class="fa-solid fa-book-open"></i>
-       </div>
-       <div>
-        <h3 class="text-2xl font-serif font-bold text-white">5+</h3>
-        <p class="text-xs text-gray-400 tracking-wider">Collections</p>
-       </div>
-      </div>
-     </div>
-     <!-- Right Quote Box -->
-     <div class="lg:col-span-4 p-8 rounded-2xl glass-card flex flex-col justify-center text-center space-y-6 relative overflow-hidden group">
-      <div class="absolute -right-10 -bottom-10 text-gold-500/5 text-9xl font-serif">
-       <i class="fa-solid fa-quote-right"></i>
-      </div>
-      <p class="text-xl md:text-2xl font-serif italic text-gray-200 font-light leading-snug">“ Kuch alfaaz the jo keh na saka,
-       <br>
-       kuch ehsaas the jo likh diya. ”</p>
-      <div class="w-12 h-[1px] bg-gold-500/40 mx-auto"></div>
-      <p class="text-lg font-cursive text-gold-400">— Ziyan Abdullah</p>
-     </div>
-    </div>
-   </section>
-   <!-- LATEST POETRY SECTION -->
-   <section id="poetry" class="pt-16 border-t border-gold-500/10">
-    <div class="flex justify-between items-end mb-8">
-     <div>
-      <h2 class="text-3xl md:text-4xl font-serif text-white tracking-wide mb-2">Latest Poetry</h2>
-      <div class="w-16 h-[2px] bg-gold-400"></div>
-     </div>
-     <button onclick="openCollectionsModal()" class="px-5 py-2 rounded-lg border border-gold-400/40 text-gold-300 hover:bg-gold-500/10 text-xs uppercase tracking-widest transition">View All</button>
-    </div>
-    <!-- Poetry Cards Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-     <!-- Poem Card 1 -->
-     <div onclick="openPoem('Adi Adhoori Kahani', 'Kuch kahaniyan mukammal nahi hoti, bas yaad ban kar reh jaati hain...', 'Kuch kahaniyan mukammal nahi hoti,\nBas yaad ban kar reh jaati hain.\nDil ke kisi kone me chhupi,\nChupke se muskurati hain.')" class="glass-card rounded-xl p-6 flex flex-col justify-between space-y-6 cursor-pointer border border-gold-500/20 hover:border-gold-400 transition group hover:-translate-y-1 duration-300">
-      <div class="space-y-3">
-       <h3 class="text-xl font-serif text-white group-hover:text-gold-300 transition">Adi Adhoori Kahani</h3>
-       <p class="text-xs text-gray-400 line-clamp-3 leading-relaxed">Kuch kahaniyan mukammal nahi hoti, bas yaad ban kar reh jaati hain...</p>
-      </div>
-      <div class="flex items-center text-xs text-gold-400 font-medium space-x-2 pt-4 border-t border-gold-500/10">
-       <span>Read More</span> <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition"></i>
-      </div>
-     </div>
-     <!-- Poem Card 2 -->
-     <div onclick="openPoem('Woh Jo Chale Gaye', 'Jo chale gaye, unki yaadein ab bhi saath chalti hain...', 'Jo chale gaye, unki yaadein\nAb bhi saath chalti hain.\nHar khamosh raat me unki\nFariyad chalte hain.')" class="glass-card rounded-xl p-6 flex flex-col justify-between space-y-6 cursor-pointer border border-gold-500/20 hover:border-gold-400 transition group hover:-translate-y-1 duration-300">
-      <div class="space-y-3">
-       <h3 class="text-xl font-serif text-white group-hover:text-gold-300 transition">Woh Jo Chale Gaye</h3>
-       <p class="text-xs text-gray-400 line-clamp-3 leading-relaxed">Jo chale gaye, unki yaadein ab bhi saath chalti hain...</p>
-      </div>
-      <div class="flex items-center text-xs text-gold-400 font-medium space-x-2 pt-4 border-t border-gold-500/10">
-       <span>Read More</span> <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition"></i>
-      </div>
-     </div>
-     <!-- Poem Card 3 -->
-     <div onclick="openPoem('Dil Ke Alfaz', 'Dil ke kuch alfaz the jo kaagaz par utar aaye...', 'Dil ke kuch alfaz the jo\nKaagaz par utar aaye.\nUnhe kya pata tha woh\nKavita ban kar bik aaye.')" class="glass-card rounded-xl p-6 flex flex-col justify-between space-y-6 cursor-pointer border border-gold-500/20 hover:border-gold-400 transition group hover:-translate-y-1 duration-300">
-      <div class="space-y-3">
-       <h3 class="text-xl font-serif text-white group-hover:text-gold-300 transition">Dil Ke Alfaz</h3>
-       <p class="text-xs text-gray-400 line-clamp-3 leading-relaxed">Dil ke kuch alfaz the jo kaagaz par utar aaye...</p>
-      </div>
-      <div class="flex items-center text-xs text-gold-400 font-medium space-x-2 pt-4 border-t border-gold-500/10">
-       <span>Read More</span> <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition"></i>
-      </div>
-     </div>
-     <!-- Poem Card 4 -->
-     <div onclick="openPoem('Raat Aur Tanhai', 'Raat, tanhai aur khayalon ka silsila kabhi khatam nahi hota...', 'Raat, tanhai aur khayalon ka\nSilsila kabhi khatam nahi hota.\nDil dukhta hai bohot\nPar ye dard zaahir nahi hota.')" class="glass-card rounded-xl p-6 flex flex-col justify-between space-y-6 cursor-pointer border border-gold-500/20 hover:border-gold-400 transition group hover:-translate-y-1 duration-300">
-      <div class="space-y-3">
-       <h3 class="text-xl font-serif text-white group-hover:text-gold-300 transition">Raat Aur Tanhai</h3>
-       <p class="text-xs text-gray-400 line-clamp-3 leading-relaxed">Raat, tanhai aur khayalon ka silsila kabhi khatam nahi hota...</p>
-      </div>
-      <div class="flex items-center text-xs text-gold-400 font-medium space-x-2 pt-4 border-t border-gold-500/10">
-       <span>Read More</span> <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition"></i>
-      </div>
-     </div>
-    </div>
-   </section>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ziyan Abdullah | Haute Literature & Portfolio</title>
-
-  <!-- Google Fonts & Font Awesome Icons -->
+  <title>Ziyan Abdullah | Official Portfolio</title>
+  
+  <!-- Exact Fonts matching the original layout -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&family=Rozha+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
-      --bg-color: #050506;
-      --card-bg: rgba(14, 15, 18, 0.75);
-      --card-border: rgba(212, 175, 55, 0.25);
+      --bg-dark: #08080a;
+      --card-bg: rgba(18, 18, 22, 0.75);
+      --card-border: rgba(212, 175, 55, 0.18);
       --gold-primary: #d4af37;
-      --gold-light: #f9f0d1;
-      --gold-dark: #9a7b1c;
+      --gold-light: #f7e7ce;
       --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
-      --text-main: #f5f5f7;
-      --text-muted: #a1a1aa;
-      --danger-color: #e74c3c;
+      --text-white: #ffffff;
+      --text-muted: #a0a0ab;
+      --heart-color: #e74c3c;
       --whatsapp-color: #25d366;
       --instagram-color: #e1306c;
-      --heart-color: #d63031;
-      --glass-blur: blur(16px);
     }
 
     * {
@@ -336,781 +33,691 @@
     }
 
     body {
-      background-color: var(--bg-color);
-      color: var(--text-main);
+      background-color: var(--bg-dark);
+      color: var(--text-white);
       font-family: 'Montserrat', sans-serif;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
+      padding: 0 20px 40px 20px;
       background-image: 
-        radial-gradient(circle at 50% -10%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
-        radial-gradient(circle at 80% 80%, rgba(18, 19, 23, 0.8) 0%, transparent 50%);
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 0.8) 0%, transparent 50%);
       background-attachment: fixed;
     }
 
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: var(--bg-color);
-    }
-    ::-webkit-scrollbar-thumb {
-      background: rgba(212, 175, 55, 0.3);
-      border-radius: 3px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--gold-primary);
-    }
-
-    header {
+    /* TOP NAVBAR - Matches exact layout */
+    nav {
       width: 100%;
-      max-width: 900px;
+      max-width: 1000px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 30px 0;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-      margin-bottom: 50px;
     }
 
-    .logo-container {
+    .brand-logo {
+      font-family: 'Alex Brush', cursive;
+      font-size: 2.2rem;
+      color: var(--gold-light);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
       display: flex;
-      flex-direction: column;
+      gap: 30px;
+      list-style: none;
     }
 
-    .logo {
-      font-family: 'Cinzel', serif;
-      font-size: 2.3rem;
-      font-weight: 700;
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--gold-primary);
+    }
+
+    .admin-access-btn {
+      background: transparent;
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      padding: 8px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .admin-access-btn:hover {
+      background: var(--gold-gradient);
+      color: #000;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+
+    /* CONTAINER */
+    .container {
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    /* HERO SECTION - Exact layout without Photo & Audio */
+    .hero-section {
+      text-align: center;
+      padding: 70px 20px 50px 20px;
+      position: relative;
+    }
+
+    .hero-tag {
+      font-size: 0.75rem;
       letter-spacing: 6px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.2rem;
+      font-weight: 400;
       background: var(--gold-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-transform: uppercase;
-      text-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-    }
-
-    .subtitle {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 300;
-      letter-spacing: 6px;
-      color: var(--gold-light);
-      text-transform: uppercase;
-      margin-top: 6px;
-      opacity: 0.75;
-    }
-
-    .admin-toggle-btn {
-      background: rgba(212, 175, 55, 0.05);
-      border: 1px solid var(--card-border);
-      color: var(--gold-light);
-      padding: 12px 24px;
-      border-radius: 50px;
-      cursor: pointer;
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-      backdrop-filter: var(--glass-blur);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .admin-toggle-btn:hover {
-      background: var(--gold-gradient);
-      color: #000;
-      border-color: transparent;
-      box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
-      transform: translateY(-2px);
-    }
-
-    main {
-      width: 100%;
-      max-width: 900px;
-    }
-
-    .view-section {
-      display: none;
-      animation: fadeIn 0.8s ease-in-out;
-    }
-
-    .view-section.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .admin-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 40px;
-      margin-bottom: 50px;
-      backdrop-filter: var(--glass-blur);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-    }
-
-    .admin-card h2 {
-      font-family: 'Cinzel', serif;
-      font-size: 1.6rem;
-      margin-bottom: 30px;
-      color: var(--gold-light);
-      letter-spacing: 2px;
-    }
-
-    .radio-group {
-      display: flex;
-      gap: 30px;
-      margin-bottom: 30px;
-    }
-
-    .radio-group label {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold-light);
-    }
-
-    .form-group {
-      margin-bottom: 25px;
-    }
-
-    .form-group label {
-      display: block;
       margin-bottom: 10px;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      line-height: 1.1;
     }
 
-    input[type="text"], input[type="password"], select, textarea, input[type="file"] {
-      width: 100%;
-      padding: 16px;
-      background: rgba(5, 5, 6, 0.8);
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      border-radius: 6px;
-      color: var(--text-main);
-      font-family: inherit;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-    }
-
-    input[type="text"]:focus, input[type="password"]:focus, select:focus, textarea:focus {
-      outline: none;
-      border-color: var(--gold-primary);
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 130px;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.25rem;
-    }
-
-    .toggle-fields {
-      display: none;
-    }
-
-    .toggle-fields.active {
-      display: block;
-    }
-
-    .publish-btn {
-      background: var(--gold-gradient);
-      color: #000;
-      border: none;
-      padding: 16px 32px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      border-radius: 6px;
-      cursor: pointer;
-      width: 100%;
-      font-size: 0.8rem;
-      transition: all 0.3s ease;
-      font-family: 'Montserrat', sans-serif;
-      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
-    }
-
-    .publish-btn:hover {
-      box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
-      transform: translateY(-1px);
-    }
-
-    #status {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 0.85rem;
+    .hero-signature-style {
+      font-family: 'Alex Brush', cursive;
+      font-size: 3.5rem;
       color: var(--gold-light);
-      letter-spacing: 1px;
+      margin-top: -15px;
+      margin-bottom: 25px;
+      opacity: 0.9;
     }
 
-    .feed-container {
-      display: flex;
-      flex-direction: column;
-      gap: 45px;
+    .feather-divider {
+      color: var(--gold-primary);
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      opacity: 0.8;
     }
 
-    /* Luxury Content Card */
-    .content-card {
+    .hero-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: #e0e0e0;
+      margin-bottom: 10px;
+    }
+
+    .hero-author {
+      font-family: 'Alex Brush', cursive;
+      font-size: 1.8rem;
+      color: var(--gold-light);
+    }
+
+    /* SECTION TITLE STYLING */
+    .section-header {
+      margin-top: 50px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--text-white);
+      font-weight: 400;
+    }
+
+    .section-title-divider {
+      width: 50px;
+      height: 1px;
+      background: var(--gold-primary);
+      margin-top: 8px;
+    }
+
+    /* ABOUT SECTION - Matches exact side-by-side cards from image */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .about-text-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 45px;
-      position: relative;
-      overflow: hidden;
-      backdrop-filter: var(--glass-blur);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-      transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    .content-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--gold-gradient);
-      opacity: 0.4;
-      transition: opacity 0.5s ease;
-    }
-
-    .content-card:hover {
-      border-color: rgba(212, 175, 55, 0.5);
-      transform: translateY(-4px);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
-    }
-
-    .content-card:hover::before {
-      opacity: 1;
-    }
-
-    .card-header-flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 25px;
-    }
-
-    .type-badge {
-      display: inline-block;
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      padding: 6px 14px;
-      border-radius: 50px;
-      background: rgba(212, 175, 55, 0.08);
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      color: var(--gold-light);
-    }
-
-    .script-switcher {
-      display: flex;
-      gap: 4px;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 4px;
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      border-radius: 50px;
-    }
-
-    .script-btn {
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      padding: 6px 14px;
-      font-size: 0.7rem;
-      cursor: pointer;
-      border-radius: 50px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      transition: all 0.3s ease;
-    }
-
-    .script-btn.active {
-      background: var(--gold-gradient);
-      color: #000;
-      font-weight: 600;
-    }
-
-    .content-card h2 {
-      font-family: 'Cinzel', serif;
-      font-size: 2.1rem;
-      font-weight: 600;
-      margin-bottom: 25px;
-      color: var(--gold-light);
-      letter-spacing: 1px;
-      line-height: 1.3;
-    }
-
-    .poetry-body {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.55rem;
-      line-height: 2.2;
-      white-space: pre-line;
-      color: #e6e6ea;
-      letter-spacing: 0.5px;
-      padding-left: 20px;
-      border-left: 2px solid var(--gold-primary);
-    }
-
-    .poetry-body.hindi-script {
-      font-family: 'Rozha One', 'Amiri', serif;
-      font-size: 1.35rem;
-      line-height: 2.4;
-    }
-
-    .card-img-wrapper {
-      width: 100%;
-      max-height: 550px;
-      overflow: hidden;
-      border-radius: 8px;
-      margin-top: 15px;
-      border: 1px solid rgba(212, 175, 55, 0.15);
-      position: relative;
-    }
-
-    .card-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    .card-img-wrapper:hover .card-img {
-      transform: scale(1.03);
-    }
-
-    .photo-caption-text {
-      margin-top: 20px;
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.25rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* Card Footer & Actions */
-    .card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 35px;
-      padding-top: 25px;
-      border-top: 1px solid rgba(212, 175, 55, 0.12);
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .action-group {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .like-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-size: 0.75rem;
-      letter-spacing: 1.5px;
-      background: rgba(231, 76, 60, 0.08);
-      color: var(--heart-color);
-      border: 1px solid rgba(231, 76, 60, 0.25);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 500;
-    }
-
-    .like-btn:hover, .like-btn.liked {
-      background: var(--heart-color);
-      color: #fff;
-      border-color: var(--heart-color);
-      box-shadow: 0 0 15px rgba(231, 76, 60, 0.4);
-    }
-
-    .share-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-size: 0.7rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border: 1px solid transparent;
-      font-weight: 500;
-    }
-
-    .share-btn-whatsapp {
-      background: rgba(37, 211, 102, 0.08);
-      color: var(--whatsapp-color);
-      border-color: rgba(37, 211, 102, 0.25);
-    }
-
-    .share-btn-whatsapp:hover {
-      background: var(--whatsapp-color);
-      color: #000;
-      box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
-    }
-
-    .share-btn-instagram {
-      background: rgba(225, 48, 108, 0.08);
-      color: var(--instagram-color);
-      border-color: rgba(225, 48, 108, 0.25);
-    }
-
-    .share-btn-instagram:hover {
-      background: var(--instagram-color);
-      color: #fff;
-      box-shadow: 0 0 15px rgba(225, 48, 108, 0.3);
-    }
-
-    .delete-btn {
-      background: transparent;
-      border: 1px solid var(--danger-color);
-      color: var(--danger-color);
-      padding: 10px 20px;
-      border-radius: 50px;
-      cursor: pointer;
-      font-size: 0.7rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-    }
-
-    .delete-btn:hover {
-      background: var(--danger-color);
-      color: #fff;
-    }
-
-    /* Comments Section */
-    .comments-wrapper {
-      margin-top: 30px;
-      padding-top: 25px;
-      border-top: 1px dashed rgba(212, 175, 55, 0.2);
-    }
-
-    .comments-title {
-      font-size: 0.75rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .comments-list {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-bottom: 25px;
-      max-height: 250px;
-      overflow-y: auto;
-      padding-right: 5px;
-    }
-
-    .comment-item {
-      background: rgba(5, 5, 6, 0.6);
-      padding: 14px 18px;
-      border-radius: 6px;
-      border: 1px solid rgba(212, 175, 55, 0.1);
-      font-size: 0.85rem;
-    }
-
-    .comment-author {
-      color: var(--gold-primary);
-      font-weight: 600;
-      font-size: 0.75rem;
-      letter-spacing: 1px;
-      margin-bottom: 4px;
-      text-transform: uppercase;
-    }
-
-    .comment-text {
-      color: #d8d8d8;
-      line-height: 1.5;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-    }
-
-    .comment-form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .comment-input-group {
-      display: flex;
-      gap: 12px;
-    }
-
-    .comment-input-group input {
-      padding: 12px;
-      font-size: 0.85rem;
-    }
-
-    .comment-submit-btn {
-      background: rgba(212, 175, 55, 0.15);
-      color: var(--gold-light);
-      border: 1px solid var(--gold-primary);
-      padding: 12px 24px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.7rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-    }
-
-    .comment-submit-btn:hover {
-      background: var(--gold-gradient);
-      color: #000;
-      font-weight: 600;
-    }
-
-    #loading {
-      text-align: center;
-      color: var(--text-muted);
-      padding: 60px;
-      font-family: 'Cinzel', serif;
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-    }
-
-    /* Modal Styling */
-    #loginModal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.9);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
+      border-radius: 10px;
+      padding: 35px;
       backdrop-filter: blur(10px);
     }
 
-    .modal-card {
+    .about-text-card p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #bbbbbf;
+      margin-bottom: 20px;
+    }
+
+    .read-more-btn {
+      background: transparent;
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s;
+    }
+
+    .read-more-btn:hover {
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 600;
+    }
+
+    .stats-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+      backdrop-filter: blur(10px);
+    }
+
+    .stat-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .stat-icon {
+      color: var(--gold-primary);
+      font-size: 1.5rem;
+      width: 30px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      color: var(--text-white);
+      font-weight: 600;
+    }
+
+    .stat-text {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .quote-box-card {
+      grid-column: span 2;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .quote-box-card p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-style: italic;
+      color: #e5e5e8;
+      margin-bottom: 15px;
+    }
+
+    /* LATEST POETRY GRID - Matches original 4-card layout */
+    .poetry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .poetry-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .poetry-card:hover {
+      border-color: rgba(212, 175, 55, 0.5);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    }
+
+    .poetry-card-type {
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 12px;
+    }
+
+    .poetry-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--gold-light);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .poetry-card p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: #a5a5ad;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      white-space: pre-line;
+    }
+
+    .poetry-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      border: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .poetry-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .card-action-btn {
+      background: transparent;
+      border: none;
+      color: var(--gold-light);
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-action-btn:hover {
+      color: var(--gold-primary);
+    }
+
+    /* SCRIPT SWITCHER ON CARD */
+    .script-btn-group {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 15px;
+    }
+
+    .script-mini-btn {
+      background: rgba(0,0,0,0.5);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      color: var(--text-muted);
+      padding: 3px 8px;
+      font-size: 0.6rem;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .script-mini-btn.active {
+      background: var(--gold-primary);
+      color: #000;
+      font-weight: 600;
+    }
+
+    /* CONNECT WITH ME - Matches original bottom bar */
+    .connect-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .connect-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .connect-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 25px;
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 25px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 6px;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: all 0.3s;
+    }
+
+    .social-btn:hover {
+      border-color: var(--gold-primary);
+      background: rgba(212, 175, 55, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .quill-art {
+      position: absolute;
+      right: 30px;
+      bottom: 20px;
+      font-size: 4rem;
+      color: rgba(212, 175, 55, 0.15);
+      pointer-events: none;
+    }
+
+    /* COMMENTS ACCORDION */
+    .comments-box {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px dashed rgba(212, 175, 55, 0.15);
+    }
+
+    .comments-box input {
+      width: 100%;
+      padding: 8px 12px;
+      background: rgba(0,0,0,0.5);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 4px;
+      color: #fff;
+      font-size: 0.75rem;
+      margin-bottom: 8px;
+    }
+
+    .comments-box button {
+      background: var(--gold-primary);
+      color: #000;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* MODAL FOR ADMIN */
+    #adminModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .modal-content {
       background: var(--card-bg);
       border: 1px solid var(--gold-primary);
-      padding: 40px;
-      border-radius: 12px;
-      text-align: center;
-      max-width: 400px;
+      padding: 35px;
+      border-radius: 10px;
       width: 90%;
-      box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
+      max-width: 500px;
+    }
+
+    .modal-content h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold-light);
+      margin-bottom: 20px;
+    }
+
+    .modal-content input, .modal-content textarea, .modal-content select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      background: rgba(0,0,0,0.7);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: #fff;
+      border-radius: 4px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      margin-top: 30px;
+    }
+
+    @media(max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .quote-box-card { grid-column: span 1; }
+      .hero-name { font-size: 3rem; }
+      .hero-signature-style { font-size: 2.5rem; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ADMIN LOGIN MODAL -->
-  <div id="loginModal">
-    <div class="modal-card">
-      <h3 style="color:var(--gold-light); margin-bottom:20px; font-family:'Cinzel', serif; font-size:1.3rem; letter-spacing:2px;">Private Access</h3>
-      <input type="password" id="passcodeInput" placeholder="Enter Passcode..." style="margin-bottom:20px; text-align:center;">
-      <div style="display:flex; gap:12px;">
-        <button onclick="verifyPasscode()" style="flex:1; background:var(--gold-gradient); color:#000; border:none; padding:12px; border-radius:6px; cursor:pointer; font-weight:600; text-transform:uppercase; letter-spacing:2px; font-size:0.75rem;">Login</button>
-        <button onclick="closeLoginModal()" style="flex:1; background:transparent; border:1px solid rgba(255,255,255,0.2); color:#ccc; padding:12px; border-radius:6px; cursor:pointer; text-transform:uppercase; letter-spacing:2px; font-size:0.75rem;">Cancel</button>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="brand-logo">Ziyan Abdullah</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#poetry">Poetry</a></li>
+      <li><a href="#connect">Contact</a></li>
+    </ul>
+    <button class="admin-access-btn" onclick="openAdminModal()">Admin Login</button>
+  </nav>
+
+  <div class="container">
+    <!-- HERO SECTION (No Photo, No Audio) -->
+    <section class="hero-section">
+      <div class="hero-tag">WRITER • POET • DREAMER</div>
+      <h1 class="hero-name">Ziyan Abdullah</h1>
+      <div class="hero-signature-style">Ziyan Abdullah</div>
+      <div class="feather-divider"><i class="fa-solid fa-feather-pointed"></i></div>
+      <p class="hero-quote">“I write what I feel, I feel what I cannot say.”</p>
+      <div class="hero-author">— Ziyan Abdullah</div>
+    </section>
+
+    <!-- ABOUT THE POET SECTION -->
+    <div class="section-header" id="about">
+      <h2 class="section-title">About The Poet</h2>
+      <div class="section-title-divider"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text-card">
+        <p>Ziyan Abdullah writes from the heart. His words are born from silence, shaped by emotions, and lived in through every line.</p>
+        <p>He believes poetry is not just written, it is felt deeply across souls.</p>
+        <button class="read-more-btn" onclick="document.getElementById('poetry').scrollIntoView({behavior: 'smooth'})">
+          Explore Works <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </div>
-      <p id="modalError" style="color:var(--danger-color); font-size:0.8rem; margin-top:15px; display:none; letter-spacing:1px;">Incorrect Passcode!</p>
+
+      <div class="stats-card">
+        <div class="stat-row">
+          <div class="stat-icon"><i class="fa-solid fa-feather"></i></div>
+          <div>
+            <div class="stat-number">100+</div>
+            <div class="stat-text">Poems Written</div>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-icon"><i class="fa-regular fa-heart"></i></div>
+          <div>
+            <div class="stat-number">10K+</div>
+            <div class="stat-text">Readers</div>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+          <div>
+            <div class="stat-number">5+</div>
+            <div class="stat-text">Collections</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-box-card">
+        <p>“Kuch alfaaz the jo keh na saka, kuch ehsaas the jo likh diya.”</p>
+        <div class="hero-author">— Ziyan Abdullah</div>
+      </div>
+    </div>
+
+    <!-- LATEST POETRY SECTION -->
+    <div class="section-header" id="poetry">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <h2 class="section-title">Latest Poetry & Works</h2>
+          <div class="section-title-divider"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="poetry-grid" id="poetryContainer">
+      <!-- Dynamic Posts Rendered Here -->
+    </div>
+
+    <!-- CONNECT WITH ME SECTION -->
+    <div class="connect-section" id="connect">
+      <h3 class="connect-title">Connect With Me</h3>
+      <p class="connect-subtitle">Let's connect and share the beauty of words.</p>
+      
+      <div class="social-buttons">
+        <a href="https://instagram.com" target="_blank" class="social-btn">
+          <i class="fa-brands fa-instagram" style="color: var(--instagram-color);"></i> Instagram
+        </a>
+        <a href="https://wa.me" target="_blank" class="social-btn">
+          <i class="fa-brands fa-whatsapp" style="color: var(--whatsapp-color);"></i> WhatsApp
+        </a>
+        <a href="mailto:contact@ziyan.com" class="social-btn">
+          <i class="fa-regular fa-envelope" style="color: var(--gold-primary);"></i> Email
+        </a>
+      </div>
+      <i class="fa-solid fa-feather-pointed quill-art"></i>
     </div>
   </div>
 
-  <header>
-    <div class="logo-container">
-      <div class="logo">ZIYAN ABDULLAH</div>
-      <div class="subtitle">Haute Literature & Atelier</div>
-    </div>
-    <button class="admin-toggle-btn" id="toggleBtn" onclick="toggleAdminView()">Admin Portal</button>
-  </header>
-
-  <main>
-    <!-- PUBLIC GALLERY VIEW -->
-    <section id="publicView" class="view-section active">
-      <div id="publicFeed" class="feed-container">
-        <div id="loading">Curating collection...</div>
-      </div>
-    </section>
-
-    <!-- ADMIN CREATION & MANAGEMENT VIEW -->
-    <section id="adminView" class="view-section">
-      <div class="admin-card">
-        <h2>Unveil New Creation</h2>
-        
-        <div class="radio-group">
-          <label>
-            <input type="radio" name="contentType" value="poetry" checked onclick="handleTypeChange()"> Poetry
-          </label>
-          <label>
-            <input type="radio" name="contentType" value="photo" onclick="handleTypeChange()"> Fine Art
-          </label>
-        </div>
-
-        <!-- POETRY FORM FIELDS -->
-        <div id="poetryFields" class="toggle-fields active">
-          <div class="form-group">
-            <label>Title</label>
-            <input type="text" id="poetryTitle" placeholder="Title of Ghazal or Nazm...">
-          </div>
-          <div class="form-group">
-            <label>Category</label>
-            <select id="poetryCategory">
-              <option value="Ghazal">Ghazal</option>
-              <option value="Nazm">Nazm</option>
-              <option value="Rubai">Rubai</option>
-              <option value="Qita">Qita</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Roman Verse</label>
-            <textarea id="poetryRoman" placeholder="Write Roman English version here..."></textarea>
-          </div>
-          <div class="form-group">
-            <label>Devanagari Verse</label>
-            <textarea id="poetryHindi" placeholder="Write Devanagari script here..."></textarea>
-          </div>
-        </div>
-
-        <!-- PHOTO FORM FIELDS -->
-        <div id="photoFields" class="toggle-fields">
-          <div class="form-group">
-            <label>Select Masterpiece / Photograph</label>
-            <input type="file" id="imageFileInput" accept="image/*">
-          </div>
-          <div class="form-group">
-            <label>Curator Notes / Caption</label>
-            <input type="text" id="photoCaption" placeholder="Add literary commentary...">
-          </div>
-        </div>
-
-        <button class="publish-btn" onclick="publishContent()">Publish Piece</button>
-        <div id="status"></div>
-      </div>
-
-      <h2 style="font-family: 'Cinzel', serif; color: var(--gold-light); margin-bottom: 30px; letter-spacing: 2px;">Archive Management</h2>
-      <div id="adminFeed" class="feed-container"></div>
-    </section>
-  </main>
-
-  <script>
-    const SECRET_PASSCODE = "ziyan@7678806145";
-
-    function handleTypeChange() {
-      const selectedType = document.querySelector('input[name="contentType"]:checked').value;
-      const poetryFields = document.getElementById('poetryFields');
-      const photoFields = document.getElementById('photoFields');
-
-      if (selectedType === 'poetry') {
-        poetryFields.classList.add('active');
-        photoFields.classList.remove('active');
-      } else {
-        photoFields.classList.add('active');
-        poetryFields.classList.remove('active');
-      }
-    }
-
-    function toggleAdminView() {
-      const publicView = document.getElementById('publicView');
-      const adminView = document.getElementById('adminView');
-      const toggleBtn = document.getElementById('toggleB
-   
-   <!-- CONNECT WITH ME SECTION -->
-   <section id="contact" class="pt-16 pb-12 border-t border-gold-500/10 relative">
-    <h2 class="text-3xl md:text-4xl font-serif text-white tracking-wide mb-2">Connect With Me</h2>
-    <p class="text-sm text-gray-400 mb-8">Let's connect and share the beauty of words.</p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">
-     <!-- Instagram Link -->
-     <a href="https://instagram.com/ziyan_abdullah05" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl glass-card flex items-center justify-center space-x-3 text-gray-200 hover:text-gold-300 border border-gold-500/20 hover:border-gold-400 transition group"> <i class="fa-brands fa-instagram text-xl text-gold-400 group-hover:scale-110 transition"></i> 
-      <div class="flex flex-col text-left">
-       <span class="text-sm font-medium tracking-wide">Instagram</span> <span class="text-[10px] text-gray-400">@ziyan_abdullah05</span>
-      </div> </a> <!-- WhatsApp Link -->
-     <a href="https://wa.me/917678806145" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl glass-card flex items-center justify-center space-x-3 text-gray-200 hover:text-gold-300 border border-gold-500/20 hover:border-gold-400 transition group"> <i class="fa-brands fa-whatsapp text-xl text-gold-400 group-hover:scale-110 transition"></i> 
-      <div class="flex flex-col text-left">
-       <span class="text-sm font-medium tracking-wide">WhatsApp</span> <span class="text-[10px] text-gray-400">+91 7678806145</span>
-      </div> </a> <!-- Email Link -->
-     <a href="mailto:ziyanabdullah980@gmail.com" class="p-4 rounded-xl glass-card flex items-center justify-center space-x-3 text-gray-200 hover:text-gold-300 border border-gold-500/20 hover:border-gold-400 transition group"> <i class="fa-regular fa-envelope text-xl text-gold-400 group-hover:scale-110 transition"></i> 
-      <div class="flex flex-col text-left">
-       <span class="text-sm font-medium tracking-wide">Email</span> <span class="text-[10px] text-gray-400">abdullahziyan980@gmail.com</span>
-      </div> </a>
-    </div>
-    <!-- Feather Inkpot Icon -->
-    <div class="absolute bottom-6 right-6 opacity-20 pointer-events-none hidden md:block">
-     <i class="fa-solid fa-pen-nib text-8xl text-gold-400"></i>
-    </div>
-   </section>
-  </main>
-  <!-- FOOTER -->
-  <footer class="w-full py-6 text-center text-xs text-gray-500 border-t border-gold-500/10">
-   <p>© 2024 Ziyan Abdullah. All Rights Reserved. <span class="text-gold-500">♥</span></p>
+  <footer>
+    © 2026 Ziyan Abdullah. All Rights Reserved. ❤️
   </footer>
-  <!-- POEM READER MODAL -->
-  <div id="poemModal" class="hidden fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4">
-   <div class="max-w-xl w-full glass-card p-8 rounded-2xl border border-gold-500/40 relative space-y-6">
-    <button onclick="closePoemModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gold-400 text-xl"><i class="fa-solid fa-xmark"></i></button>
-    <h3 id="modalTitle" class="text-2xl font-serif text-gold-300"></h3>
-    <div class="w-12 h-[1px] bg-gold-400"></div>
-    <pre id="modalContent" class="font-serif text-gray-200 whitespace-pre-wrap leading-relaxed italic text-base sm:text-lg"></pre>
-    <div class="pt-4 text-right">
-     <button onclick="closePoemModal()" class="px-5 py-2 bg-gold-500/20 text-gold-300 rounded-lg border border-gold-400/40 hover:bg-gold-500/30 text-xs uppercase tracking-wider">Close</button>
+
+  <!-- ADMIN PASSCODE & PUBLISH MODAL -->
+  <div id="adminModal">
+    <div class="modal-content">
+      <div id="loginStep">
+        <h3>Admin Authentication</h3>
+        <input type="password" id="passInput" placeholder="Enter Admin Passcode...">
+        <button onclick="loginAdmin()" class="read-more-btn" style="width: 100%; justify-content: center;">Access Portal</button>
+        <button onclick="closeAdminModal()" style="background:transparent; border:none; color:#888; width:100%; margin-top:10px; cursor:pointer;">Cancel</button>
+      </div>
+
+      <div id="publishStep" style="display: none;">
+        <h3>Publish New Work</h3>
+        <select id="postTypeSelect" onchange="toggleFormType()">
+          <option value="poetry">Poetry Piece</option>
+          <option value="photo">Photo / Artwork</option>
+        </select>
+
+        <div id="poetryInputs">
+          <input type="text" id="pTitle" placeholder="Title (e.g. Dil Ke Alfaaz)">
+          <select id="pCategory">
+            <option value="Ghazal">Ghazal</option>
+            <option value="Nazm">Nazm</option>
+            <option value="Rubai">Rubai</option>
+          </select>
+          <textarea id="pRoman" placeholder="Roman Verse lines..." rows="3"></textarea>
+          <textarea id="pHindi" placeholder="Devanagari / Hindi Verse lines..." rows="3"></textarea>
+        </div>
+
+        <div id="photoInputs" style="display: none;">
+          <input type="file" id="pImageFile" accept="image/*">
+          <input type="text" id="pCaption" placeholder="Photo Caption / Description">
+        </div>
+
+        <button onclick="saveNewPost()" class="read-more-btn" style="width: 100%; justify-content: center;">Publish</button>
+        <button onclick="closeAdminModal()" style="background:transparent; border:none; color:#888; width:100%; margin-top:10px; cursor:pointer;">Close</button>
+      </div>
     </div>
-   </div>
   </div>
-  <!-- JAVASCRIPT: UI INTERACTION FUNCTIONS -->
+
   <script>
-        // Mobile Nav Toggle
-        function toggleMobileNav() {
-            const nav = document.getElementById('mobileNav');
-            nav.classList.toggle('hidden');
-        }
+    const ADMIN_PASS = "ziyan@7678806145";
 
-        // Poem Modal Functions
-        function openPoem(title, snippet, fullText) {
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalContent').innerText = fullText;
-            document.getElementById('poemModal').classList.remove('hidden');
-        }
-
-        function closePoemModal() {
-            document.getElementById('poemModal').classList.add('hidden');
-        }
-
-        function openCollectionsModal() {
-            openPoem("Poetry Collections", "", "1. Dil Ke Alfaz\n2. Adi Adhoori Kahani\n3. Woh Jo Chale Gaye\n4. Raat Aur Tanhai\n5. Khamoshiyan");
-        }
-    </script>
- </body>
-</html>
-<                     
-
-    .
-   
-
-   
-
- 
+    // Default Sample Data matching photo titles
+    const defaultData = [
+      {
+        type: "poetry",
+        title: "Adi Adhoori Kahani",
+        category: "Ghazal",
+        roman: "Kuch kahaniyan mukammal nahi hoti,\nbas yaad ban kar reh jaati hain...",
+        hindi: "कुछ कहानियां मुकम्मल नहीं होती,\nबस याद बन कर रह जाती हैं...",
+        likes: 12,
+        isLiked: false,
+        comments: ["Very deep lines", "Beautifully written!"]
+      },
+      {
+        type: "poetry",
+        title: "Woh Jo Chale Gaye",
+        category: "Nazm",
+        roman: "Jo chale gaye, unki yaadein\naab bhi saath chalti hain...",
+        hindi: "जो चले गए, उनकी यादें\nअब भी साथ चलती हैं...",
+        likes: 24,
+        isLiked: false,
+        comments: ["Touched my heart."]
+      },
+      {
+        type: "poetry",
+        title: "Dil Ke Alfaaz",
+        category: "Ghazal",
+        roman: "Dil ke kuch alfaaz the jo\nkaagaz par utar aaye...",
+        hindi: "दिल के कुछ अल्फाज़ थे जो\nकागज़ पर उतर आए...",
+        likes: 19,
+        isLiked: false,
+        comments: []
+      },
+      {
+        type: "poetry",
+        title: "Raat Aur Tanhai",
+        category: "Nazm",
+        roman: "Raat, tanhai aur khayalon ka\nsilsila kabhi khatam nahi hota...",
+        hindi: "रात, तन्हाई और ख़यालों का\nसिलसिला कभी खत्म नहीं होता...",
+        likes: 31,
+        isLike
