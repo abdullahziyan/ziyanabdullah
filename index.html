@@ -298,72 +298,6 @@
      </div>
     </div>
    </section>
-   <!-- CONNECT WITH ME SECTION -->
-   <section id="contact" class="pt-16 pb-12 border-t border-gold-500/10 relative">
-    <h2 class="text-3xl md:text-4xl font-serif text-white tracking-wide mb-2">Connect With Me</h2>
-    <p class="text-sm text-gray-400 mb-8">Let's connect and share the beauty of words.</p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">
-     <!-- Instagram Link -->
-     <a href="https://instagram.com/ziyan_abdullah05" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl glass-card flex items-center justify-center space-x-3 text-gray-200 hover:text-gold-300 border border-gold-500/20 hover:border-gold-400 transition group"> <i class="fa-brands fa-instagram text-xl text-gold-400 group-hover:scale-110 transition"></i> 
-      <div class="flex flex-col text-left">
-       <span class="text-sm font-medium tracking-wide">Instagram</span> <span class="text-[10px] text-gray-400">@ziyan_abdullah05</span>
-      </div> </a> <!-- WhatsApp Link -->
-     <a href="https://wa.me/917678806145" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl glass-card flex items-center justify-center space-x-3 text-gray-200 hover:text-gold-300 border border-gold-500/20 hover:border-gold-400 transition group"> <i class="fa-brands fa-whatsapp text-xl text-gold-400 group-hover:scale-110 transition"></i> 
-      <div class="flex flex-col text-left">
-       <span class="text-sm font-medium tracking-wide">WhatsApp</span> <span class="text-[10px] text-gray-400">+91 7678806145</span>
-      </div> </a> <!-- Email Link -->
-     <a href="mailto:ziyanabdullah980@gmail.com" class="p-4 rounded-xl glass-card flex items-center justify-center space-x-3 text-gray-200 hover:text-gold-300 border border-gold-500/20 hover:border-gold-400 transition group"> <i class="fa-regular fa-envelope text-xl text-gold-400 group-hover:scale-110 transition"></i> 
-      <div class="flex flex-col text-left">
-       <span class="text-sm font-medium tracking-wide">Email</span> <span class="text-[10px] text-gray-400">abdullahziyan980@gmail.com</span>
-      </div> </a>
-    </div>
-    <!-- Feather Inkpot Icon -->
-    <div class="absolute bottom-6 right-6 opacity-20 pointer-events-none hidden md:block">
-     <i class="fa-solid fa-pen-nib text-8xl text-gold-400"></i>
-    </div>
-   </section>
-  </main>
-  <!-- FOOTER -->
-  <footer class="w-full py-6 text-center text-xs text-gray-500 border-t border-gold-500/10">
-   <p>© 2024 Ziyan Abdullah. All Rights Reserved. <span class="text-gold-500">♥</span></p>
-  </footer>
-  <!-- POEM READER MODAL -->
-  <div id="poemModal" class="hidden fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4">
-   <div class="max-w-xl w-full glass-card p-8 rounded-2xl border border-gold-500/40 relative space-y-6">
-    <button onclick="closePoemModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gold-400 text-xl"><i class="fa-solid fa-xmark"></i></button>
-    <h3 id="modalTitle" class="text-2xl font-serif text-gold-300"></h3>
-    <div class="w-12 h-[1px] bg-gold-400"></div>
-    <pre id="modalContent" class="font-serif text-gray-200 whitespace-pre-wrap leading-relaxed italic text-base sm:text-lg"></pre>
-    <div class="pt-4 text-right">
-     <button onclick="closePoemModal()" class="px-5 py-2 bg-gold-500/20 text-gold-300 rounded-lg border border-gold-400/40 hover:bg-gold-500/30 text-xs uppercase tracking-wider">Close</button>
-    </div>
-   </div>
-  </div>
-  <!-- JAVASCRIPT: UI INTERACTION FUNCTIONS -->
-  <script>
-        // Mobile Nav Toggle
-        function toggleMobileNav() {
-            const nav = document.getElementById('mobileNav');
-            nav.classList.toggle('hidden');
-        }
-
-        // Poem Modal Functions
-        function openPoem(title, snippet, fullText) {
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalContent').innerText = fullText;
-            document.getElementById('poemModal').classList.remove('hidden');
-        }
-
-        function closePoemModal() {
-            document.getElementById('poemModal').classList.add('hidden');
-        }
-
-        function openCollectionsModal() {
-            openPoem("Poetry Collections", "", "1. Dil Ke Alfaz\n2. Adi Adhoori Kahani\n3. Woh Jo Chale Gaye\n4. Raat Aur Tanhai\n5. Khamoshiyan");
-        }
-    </script>
- </body>
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1105,3 +1039,78 @@
       const publicView = document.getElementById('publicView');
       const adminView = document.getElementById('adminView');
       const toggleBtn = document.getElementById('toggleB
+   
+   <!-- CONNECT WITH ME SECTION -->
+   <section id="contact" class="pt-16 pb-12 border-t border-gold-500/10 relative">
+    <h2 class="text-3xl md:text-4xl font-serif text-white tracking-wide mb-2">Connect With Me</h2>
+    <p class="text-sm text-gray-400 mb-8">Let's connect and share the beauty of words.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">
+     <!-- Instagram Link -->
+     <a href="https://instagram.com/ziyan_abdullah05" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl glass-card flex items-center justify-center space-x-3 text-gray-200 hover:text-gold-300 border border-gold-500/20 hover:border-gold-400 transition group"> <i class="fa-brands fa-instagram text-xl text-gold-400 group-hover:scale-110 transition"></i> 
+      <div class="flex flex-col text-left">
+       <span class="text-sm font-medium tracking-wide">Instagram</span> <span class="text-[10px] text-gray-400">@ziyan_abdullah05</span>
+      </div> </a> <!-- WhatsApp Link -->
+     <a href="https://wa.me/917678806145" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl glass-card flex items-center justify-center space-x-3 text-gray-200 hover:text-gold-300 border border-gold-500/20 hover:border-gold-400 transition group"> <i class="fa-brands fa-whatsapp text-xl text-gold-400 group-hover:scale-110 transition"></i> 
+      <div class="flex flex-col text-left">
+       <span class="text-sm font-medium tracking-wide">WhatsApp</span> <span class="text-[10px] text-gray-400">+91 7678806145</span>
+      </div> </a> <!-- Email Link -->
+     <a href="mailto:ziyanabdullah980@gmail.com" class="p-4 rounded-xl glass-card flex items-center justify-center space-x-3 text-gray-200 hover:text-gold-300 border border-gold-500/20 hover:border-gold-400 transition group"> <i class="fa-regular fa-envelope text-xl text-gold-400 group-hover:scale-110 transition"></i> 
+      <div class="flex flex-col text-left">
+       <span class="text-sm font-medium tracking-wide">Email</span> <span class="text-[10px] text-gray-400">abdullahziyan980@gmail.com</span>
+      </div> </a>
+    </div>
+    <!-- Feather Inkpot Icon -->
+    <div class="absolute bottom-6 right-6 opacity-20 pointer-events-none hidden md:block">
+     <i class="fa-solid fa-pen-nib text-8xl text-gold-400"></i>
+    </div>
+   </section>
+  </main>
+  <!-- FOOTER -->
+  <footer class="w-full py-6 text-center text-xs text-gray-500 border-t border-gold-500/10">
+   <p>© 2024 Ziyan Abdullah. All Rights Reserved. <span class="text-gold-500">♥</span></p>
+  </footer>
+  <!-- POEM READER MODAL -->
+  <div id="poemModal" class="hidden fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4">
+   <div class="max-w-xl w-full glass-card p-8 rounded-2xl border border-gold-500/40 relative space-y-6">
+    <button onclick="closePoemModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gold-400 text-xl"><i class="fa-solid fa-xmark"></i></button>
+    <h3 id="modalTitle" class="text-2xl font-serif text-gold-300"></h3>
+    <div class="w-12 h-[1px] bg-gold-400"></div>
+    <pre id="modalContent" class="font-serif text-gray-200 whitespace-pre-wrap leading-relaxed italic text-base sm:text-lg"></pre>
+    <div class="pt-4 text-right">
+     <button onclick="closePoemModal()" class="px-5 py-2 bg-gold-500/20 text-gold-300 rounded-lg border border-gold-400/40 hover:bg-gold-500/30 text-xs uppercase tracking-wider">Close</button>
+    </div>
+   </div>
+  </div>
+  <!-- JAVASCRIPT: UI INTERACTION FUNCTIONS -->
+  <script>
+        // Mobile Nav Toggle
+        function toggleMobileNav() {
+            const nav = document.getElementById('mobileNav');
+            nav.classList.toggle('hidden');
+        }
+
+        // Poem Modal Functions
+        function openPoem(title, snippet, fullText) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalContent').innerText = fullText;
+            document.getElementById('poemModal').classList.remove('hidden');
+        }
+
+        function closePoemModal() {
+            document.getElementById('poemModal').classList.add('hidden');
+        }
+
+        function openCollectionsModal() {
+            openPoem("Poetry Collections", "", "1. Dil Ke Alfaz\n2. Adi Adhoori Kahani\n3. Woh Jo Chale Gaye\n4. Raat Aur Tanhai\n5. Khamoshiyan");
+        }
+    </script>
+ </body>
+</html>
+<                     
+
+    .
+   
+
+   
+
+ 
