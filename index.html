@@ -14,8 +14,8 @@
   <style>
     :root {
       --bg-dark: #08080a;
-      --card-bg: rgba(18, 18, 22, 0.75);
-      --card-border: rgba(212, 175, 55, 0.18);
+      --card-bg: rgba(18, 18, 22, 0.85);
+      --card-border: rgba(212, 175, 55, 0.25);
       --gold-primary: #d4af37;
       --gold-light: #f7e7ce;
       --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
@@ -42,12 +42,12 @@
       align-items: center;
       padding: 0 20px 40px 20px;
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 0.8) 0%, transparent 50%);
       background-attachment: fixed;
     }
 
-    /* TOP NAVBAR - Matches exact layout */
+    /* TOP NAVBAR */
     nav {
       width: 100%;
       max-width: 1000px;
@@ -59,7 +59,7 @@
 
     .brand-logo {
       font-family: 'Alex Brush', cursive;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       color: var(--gold-light);
       letter-spacing: 1px;
     }
@@ -86,13 +86,15 @@
       background: transparent;
       border: 1px solid var(--gold-primary);
       color: var(--gold-light);
-      padding: 8px 18px;
+      padding: 10px 22px;
       border-radius: 30px;
       cursor: pointer;
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       transition: all 0.3s ease;
+      position: relative;
+      z-index: 10;
     }
 
     .admin-access-btn:hover {
@@ -107,7 +109,7 @@
       max-width: 1000px;
     }
 
-    /* HERO SECTION - Exact layout without Photo & Audio */
+    /* HERO SECTION */
     .hero-section {
       text-align: center;
       padding: 70px 20px 50px 20px;
@@ -184,7 +186,7 @@
       margin-top: 8px;
     }
 
-    /* ABOUT SECTION - Matches exact side-by-side cards from image */
+    /* ABOUT SECTION */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -284,7 +286,7 @@
       margin-bottom: 15px;
     }
 
-    /* LATEST POETRY GRID - Matches original 4-card layout */
+    /* POETRY GRID */
     .poetry-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -302,11 +304,10 @@
       justify-content: space-between;
       transition: all 0.4s ease;
       position: relative;
-      overflow: hidden;
     }
 
     .poetry-card:hover {
-      border-color: rgba(212, 175, 55, 0.5);
+      border-color: rgba(212, 175, 55, 0.6);
       transform: translateY(-5px);
       box-shadow: 0 10px 30px rgba(0,0,0,0.8);
     }
@@ -338,386 +339,4 @@
 
     .poetry-card img {
       width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 15px;
-      border: 1px solid rgba(212, 175, 55, 0.1);
-    }
-
-    .poetry-card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 15px;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .card-action-btn {
-      background: transparent;
-      border: none;
-      color: var(--gold-light);
-      font-size: 0.75rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .card-action-btn:hover {
-      color: var(--gold-primary);
-    }
-
-    /* SCRIPT SWITCHER ON CARD */
-    .script-btn-group {
-      display: flex;
-      gap: 4px;
-      margin-bottom: 15px;
-    }
-
-    .script-mini-btn {
-      background: rgba(0,0,0,0.5);
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      color: var(--text-muted);
-      padding: 3px 8px;
-      font-size: 0.6rem;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-
-    .script-mini-btn.active {
-      background: var(--gold-primary);
-      color: #000;
-      font-weight: 600;
-    }
-
-    /* CONNECT WITH ME - Matches original bottom bar */
-    .connect-section {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 10px;
-      padding: 30px;
-      margin-bottom: 60px;
-      position: relative;
-    }
-
-    .connect-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      margin-bottom: 8px;
-    }
-
-    .connect-subtitle {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 25px;
-    }
-
-    .social-buttons {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .social-btn {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 25px;
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      border-radius: 6px;
-      background: rgba(0,0,0,0.4);
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.8rem;
-      transition: all 0.3s;
-    }
-
-    .social-btn:hover {
-      border-color: var(--gold-primary);
-      background: rgba(212, 175, 55, 0.1);
-      transform: translateY(-2px);
-    }
-
-    .quill-art {
-      position: absolute;
-      right: 30px;
-      bottom: 20px;
-      font-size: 4rem;
-      color: rgba(212, 175, 55, 0.15);
-      pointer-events: none;
-    }
-
-    /* COMMENTS ACCORDION */
-    .comments-box {
-      margin-top: 15px;
-      padding-top: 15px;
-      border-top: 1px dashed rgba(212, 175, 55, 0.15);
-    }
-
-    .comments-box input {
-      width: 100%;
-      padding: 8px 12px;
-      background: rgba(0,0,0,0.5);
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      border-radius: 4px;
-      color: #fff;
-      font-size: 0.75rem;
-      margin-bottom: 8px;
-    }
-
-    .comments-box button {
-      background: var(--gold-primary);
-      color: #000;
-      border: none;
-      padding: 6px 14px;
-      border-radius: 4px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    /* MODAL FOR ADMIN */
-    #adminModal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: blur(8px);
-    }
-
-    .modal-content {
-      background: var(--card-bg);
-      border: 1px solid var(--gold-primary);
-      padding: 35px;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 500px;
-    }
-
-    .modal-content h3 {
-      font-family: 'Cinzel', serif;
-      color: var(--gold-light);
-      margin-bottom: 20px;
-    }
-
-    .modal-content input, .modal-content textarea, .modal-content select {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      background: rgba(0,0,0,0.7);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      color: #fff;
-      border-radius: 4px;
-    }
-
-    footer {
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      letter-spacing: 1px;
-      margin-top: 30px;
-    }
-
-    @media(max-width: 768px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .quote-box-card { grid-column: span 1; }
-      .hero-name { font-size: 3rem; }
-      .hero-signature-style { font-size: 2.5rem; }
-      .nav-links { display: none; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- NAVBAR -->
-  <nav>
-    <div class="brand-logo">Ziyan Abdullah</div>
-    <ul class="nav-links">
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#poetry">Poetry</a></li>
-      <li><a href="#connect">Contact</a></li>
-    </ul>
-    <button class="admin-access-btn" onclick="openAdminModal()">Admin Login</button>
-  </nav>
-
-  <div class="container">
-    <!-- HERO SECTION (No Photo, No Audio) -->
-    <section class="hero-section">
-      <div class="hero-tag">WRITER • POET • DREAMER</div>
-      <h1 class="hero-name">Ziyan Abdullah</h1>
-      <div class="hero-signature-style">Ziyan Abdullah</div>
-      <div class="feather-divider"><i class="fa-solid fa-feather-pointed"></i></div>
-      <p class="hero-quote">“I write what I feel, I feel what I cannot say.”</p>
-      <div class="hero-author">— Ziyan Abdullah</div>
-    </section>
-
-    <!-- ABOUT THE POET SECTION -->
-    <div class="section-header" id="about">
-      <h2 class="section-title">About The Poet</h2>
-      <div class="section-title-divider"></div>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-text-card">
-        <p>Ziyan Abdullah writes from the heart. His words are born from silence, shaped by emotions, and lived in through every line.</p>
-        <p>He believes poetry is not just written, it is felt deeply across souls.</p>
-        <button class="read-more-btn" onclick="document.getElementById('poetry').scrollIntoView({behavior: 'smooth'})">
-          Explore Works <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
-
-      <div class="stats-card">
-        <div class="stat-row">
-          <div class="stat-icon"><i class="fa-solid fa-feather"></i></div>
-          <div>
-            <div class="stat-number">100+</div>
-            <div class="stat-text">Poems Written</div>
-          </div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-icon"><i class="fa-regular fa-heart"></i></div>
-          <div>
-            <div class="stat-number">10K+</div>
-            <div class="stat-text">Readers</div>
-          </div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-icon"><i class="fa-solid fa-book-bookmark"></i></div>
-          <div>
-            <div class="stat-number">5+</div>
-            <div class="stat-text">Collections</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="quote-box-card">
-        <p>“Kuch alfaaz the jo keh na saka, kuch ehsaas the jo likh diya.”</p>
-        <div class="hero-author">— Ziyan Abdullah</div>
-      </div>
-    </div>
-
-    <!-- LATEST POETRY SECTION -->
-    <div class="section-header" id="poetry">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-        <div>
-          <h2 class="section-title">Latest Poetry & Works</h2>
-          <div class="section-title-divider"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="poetry-grid" id="poetryContainer">
-      <!-- Dynamic Posts Rendered Here -->
-    </div>
-
-    <!-- CONNECT WITH ME SECTION -->
-    <div class="connect-section" id="connect">
-      <h3 class="connect-title">Connect With Me</h3>
-      <p class="connect-subtitle">Let's connect and share the beauty of words.</p>
-      
-      <div class="social-buttons">
-        <a href="https://instagram.com" target="_blank" class="social-btn">
-          <i class="fa-brands fa-instagram" style="color: var(--instagram-color);"></i> Instagram
-        </a>
-        <a href="https://wa.me" target="_blank" class="social-btn">
-          <i class="fa-brands fa-whatsapp" style="color: var(--whatsapp-color);"></i> WhatsApp
-        </a>
-        <a href="mailto:contact@ziyan.com" class="social-btn">
-          <i class="fa-regular fa-envelope" style="color: var(--gold-primary);"></i> Email
-        </a>
-      </div>
-      <i class="fa-solid fa-feather-pointed quill-art"></i>
-    </div>
-  </div>
-
-  <footer>
-    © 2026 Ziyan Abdullah. All Rights Reserved. ❤️
-  </footer>
-
-  <!-- ADMIN PASSCODE & PUBLISH MODAL -->
-  <div id="adminModal">
-    <div class="modal-content">
-      <div id="loginStep">
-        <h3>Admin Authentication</h3>
-        <input type="password" id="passInput" placeholder="Enter Admin Passcode...">
-        <button onclick="loginAdmin()" class="read-more-btn" style="width: 100%; justify-content: center;">Access Portal</button>
-        <button onclick="closeAdminModal()" style="background:transparent; border:none; color:#888; width:100%; margin-top:10px; cursor:pointer;">Cancel</button>
-      </div>
-
-      <div id="publishStep" style="display: none;">
-        <h3>Publish New Work</h3>
-        <select id="postTypeSelect" onchange="toggleFormType()">
-          <option value="poetry">Poetry Piece</option>
-          <option value="photo">Photo / Artwork</option>
-        </select>
-
-        <div id="poetryInputs">
-          <input type="text" id="pTitle" placeholder="Title (e.g. Dil Ke Alfaaz)">
-          <select id="pCategory">
-            <option value="Ghazal">Ghazal</option>
-            <option value="Nazm">Nazm</option>
-            <option value="Rubai">Rubai</option>
-          </select>
-          <textarea id="pRoman" placeholder="Roman Verse lines..." rows="3"></textarea>
-          <textarea id="pHindi" placeholder="Devanagari / Hindi Verse lines..." rows="3"></textarea>
-        </div>
-
-        <div id="photoInputs" style="display: none;">
-          <input type="file" id="pImageFile" accept="image/*">
-          <input type="text" id="pCaption" placeholder="Photo Caption / Description">
-        </div>
-
-        <button onclick="saveNewPost()" class="read-more-btn" style="width: 100%; justify-content: center;">Publish</button>
-        <button onclick="closeAdminModal()" style="background:transparent; border:none; color:#888; width:100%; margin-top:10px; cursor:pointer;">Close</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const ADMIN_PASS = "ziyan@7678806145";
-
-    // Default Sample Data matching photo titles
-    const defaultData = [
-      {
-        type: "poetry",
-        title: "Adi Adhoori Kahani",
-        category: "Ghazal",
-        roman: "Kuch kahaniyan mukammal nahi hoti,\nbas yaad ban kar reh jaati hain...",
-        hindi: "कुछ कहानियां मुकम्मल नहीं होती,\nबस याद बन कर रह जाती हैं...",
-        likes: 12,
-        isLiked: false,
-        comments: ["Very deep lines", "Beautifully written!"]
-      },
-      {
-        type: "poetry",
-        title: "Woh Jo Chale Gaye",
-        category: "Nazm",
-        roman: "Jo chale gaye, unki yaadein\naab bhi saath chalti hain...",
-        hindi: "जो चले गए, उनकी यादें\nअब भी साथ चलती हैं...",
-        likes: 24,
-        isLiked: false,
-        comments: ["Touched my heart."]
-      },
-      {
-        type: "poetry",
-        title: "Dil Ke Alfaaz",
-        category: "Ghazal",
-        roman: "Dil ke kuch alfaaz the jo\nkaagaz par utar aaye...",
-        hindi: "दिल के कुछ अल्फाज़ थे जो\nकागज़ पर उतर आए...",
-        likes: 19,
-        isLiked: false,
-        comments: []
-      },
-      {
-        type: "poetry",
-        title: "Raat Aur Tanhai",
-        category: "Nazm",
-        roman: "Raat, tanhai aur khayalon ka\nsilsila kabhi khatam nahi hota...",
-        hindi: "रात, तन्हाई और ख़यालों का\nसिलसिला कभी खत्म नहीं होता...",
-        likes: 31,
-        isLike
+      height: 180
